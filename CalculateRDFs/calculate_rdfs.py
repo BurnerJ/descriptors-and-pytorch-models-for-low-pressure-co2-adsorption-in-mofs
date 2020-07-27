@@ -94,10 +94,7 @@ def main(name):
         dist_ij = min(np.linalg.norm(cart_j - cart_i, axis=1))
         rdf = np.exp(smooth * (bins - dist_ij) ** 2)
         rdf = rdf.repeat(n_props).reshape(n_bins, n_props)
-        #np.where(apw_rdf > rdf * prop_dict[(elements[i], elements[j])], apw_rdf, rdf * prop_dict[(elements[i], elements[j])])
-        new_rdf = (rdf * prop_dict[(elements[i], elements[j])]).T
-        apw_rdf = np.max([apw_rdf, new_rdf], axis=0)
-        #apw_rdf += (rdf * prop_dict[(elements[i], elements[j])]).T
+        apw_rdf += (rdf * prop_dict[(elements[i], elements[j])]).T
     apw_rdf = np.round(apw_rdf.flatten() * factor / n_atoms, decimals=12)
 
     return ("{}," * len(apw_rdf) + "{}\n").format(
