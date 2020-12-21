@@ -71,7 +71,14 @@ def main(name):
     aa = np.deg2rad(float(mof["_cell_angle_alpha"]))
     ab = np.deg2rad(float(mof["_cell_angle_beta"]))
     ag = np.deg2rad(float(mof["_cell_angle_gamma"]))
-    cv = float(mof["_cell_volume"])
+    # If volume is missing from .cif, calculate it.
+    try:
+        cv = float(mof["_cell_volume"])
+    except KeyError:
+        cv = la * lb * lc * math.sqrt(1 - (math.cos(aa)) ** 2 -
+                (math.cos(ab)) ** 2 - (math.cos(ag)) ** 2 +
+                (2 * math.cos(aa) * math.cos(ab) * math.cos(ag)))
+
 
     frac2cart = np.zeros([3, 3], dtype=float)
     frac2cart[0, 0] = la
