@@ -13,6 +13,7 @@ from CifFile import ReadCif
 from atomic_property_dict import apd
 from itertools import product, combinations, combinations_with_replacement
 from datetime import datetime
+import math
 
 ########################### USER MUST DEFINE THESE ###########################
 
