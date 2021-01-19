@@ -2,13 +2,17 @@
 
 The Python scripts included were written or modified in part by current/former members of the Woo Lab at the University of Ottawa: Jake Burner and Jun Luo. Specific contributions are included in each script.
 
-The csv file of our database (i.e. an example of how the descriptors should be named/ordered) is available as supplementary material to our publication (DOI to be provided once published).
+The data used in our study (https://doi.org/10.1021/acs.jpcc.0c06334) (i.e. an example of how the descriptors should be named/ordered) is available at this link: https://1drv.ms/u/s!AtuVqcWZi8aAy11S2wxataTe8IMH. Within this zip folder there are three zip folders and one csv:
+        -all_data.csv (the descriptor values AND target values (CO2 working capacity, CO2/N2 selectivity), as described in the paper)
+        -dev_cifs.zip (the cifs we used in our development/validation set)
+        -test_cifs.zip (the cifs we used in our test set)
+        -train_cifs.zip (the cifs we used in our training set)
 
 Included are Python3 scripts to do the following (any missing packages can be easily pip installed):
 
 1. Calculate AP-RDF descriptors on a directory of cifs
 2. Calculate the bag-of-atoms descriptor on a directory of cifs
-3. Predict CO2 working capacity and CO2/N2 selectivity on a database of materials for which AP-RDF, chemical motifs, geometric, or bag-of-atoms descriptors have been calculated using models developed by Burner, Schwiedrzik, Krykunov, Boyd, and Woo 
+3. Predict CO2 working capacity and CO2/N2 selectivity on a database of materials for which AP-RDF, chemical motifs, geometric, or bag-of-atoms descriptors have been calculated using models developed in https://doi.org/10.1021/acs.jpcc.0c06334.
 
 IMPORTANT NOTES
 =====================================================================================================================================================================
