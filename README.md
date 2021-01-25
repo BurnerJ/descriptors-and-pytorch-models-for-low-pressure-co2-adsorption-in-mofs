@@ -1,6 +1,6 @@
 # descriptors-and-pytorch-models-for-low-pressure-co2-adsorption-in-mofs
 
-The Python scripts included were written or modified in part by current/former members of the Woo Lab at the University of Ottawa: Jake Burner and Jun Luo. Specific contributions are included in each script.
+The Python scripts included were written or modified in part by Jake Burner and Jun Luo. Specific contributions are included in each script.
 
 The data used in our study (https://doi.org/10.1021/acs.jpcc.0c06334) (i.e. an example of how the descriptors should be named/ordered) is available at this link: https://1drv.ms/u/s!AtuVqcWZi8aAy11S2wxataTe8IMH. Within this zip folder there are three zip folders and one csv:
         
